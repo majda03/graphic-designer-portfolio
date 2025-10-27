@@ -1,0 +1,888 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: white;
+  color: #333;
+  line-height: 1.6;
+}
+
+.header {
+  background: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #868693;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #000;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') no-repeat center/cover;
+  height: 670px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 12px 30px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition:  0.3s;
+}
+
+.btn:hover {
+  background: #333;
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card {
+  background: #fff;
+  padding: 30px;
+  flex: 1;
+  min-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+button {
+  background: #111;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #333;
+}
+
+.footer {
+  background: #f3e3e3;
+  color: #070404;
+  padding: 30px 20px;
+  text-align: center;
+}
+.wrapper {
+  display: flex;
+  justify-content: flex;
+  padding: 50px;
+  margin-left: 650px;
+}
+.album-container {
+  position: relative;
+  display: inline-block;
+  margin-right: 600px;
+  
+}
+
+.album {
+  position: absolute;
+  top: 0;
+  right: 260px; /* pomjeri album lijevo od naslovne slike */
+  width: 400px;
+  height: 270px;
+  display: none;
+  grid-template-columns: repeat(3, 1fr); /* 3 slike po redu */
+  gap: 10px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  z-index: 10;
+
+  display: grid; /* koristi grid za raspored */
+}
+
+.album-container:hover .album {
+  display: grid; /* prikaži album na hover */
+}
+
+.album img {
+  width: 120px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.album img:hover {
+  transform: scale(1.1);
+}
+
+
+/* Lightbox stil */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  margin-top: 0px;
+}
+
+#lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+}
+
+#services {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.service-card {
+  background: white;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  max-width: 300px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.service-card i {
+  font-size: 30px;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+
+.expertise-section h2 {
+  font-size: 2.0rem;
+  margin-bottom: 60px;
+  color: #111;
+  margin-top: -60px;
+}
+
+.expertise-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.expertise-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: #ededed;
+  padding: 20px 30px;
+  border-left: 4px solid #111;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.expertise-item:hover {
+  transform: translateX(10px);
+}
+
+.icon-circle {
+  background-color: #111;
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 20px;
+  border-radius: 50%;
+  min-width: 65px;
+  text-align: center;
+}
+/* === EXPERTISE SECTION === */
+
+
+.expertise-section h2 {
+
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.expertise-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.expertise-card {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.expertise-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-circle {
+  background: #222;
+  color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+/* Tooltip */
+.expertise-card::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #111;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.expertise-card:hover::after {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .expertise-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .expertise-card {
+    max-width: 300px;
+  }
+}
+.expertise-section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.expertise-section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.2em;
+}
+
+
+.expertise-row:hover {
+  transform: translateX(5px);
+}
+
+.expertise-icon {
+  background: #111;
+  color: white;
+  padding: 20px;
+  border-radius: 50%;
+  font-size: 1.6em;
+  margin-right: 25px;
+  flex-shrink: 0;
+}
+
+.expertise-content h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.4em;
+}
+
+.expertise-content p {
+  margin: 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Tooltip */
+.expertise-row::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.expertise-row:hover::before {
+  opacity: 1;
+}
+.expertise-item {
+    position: relative;
+}
+
+.expertise-item:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 80%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 14px;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.expertise-item::after {
+    content: '';
+    opacity: 0;
+    pointer-events: none;
+}
+.testimonials {
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 400px;
+  margin-top: 50px;
+}
+
+.testimonials h2 {
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.testimonial {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-style: italic;
+  color: #333;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  font-style: normal;
+  color: #555;
+}
+.cta-section {
+  text-align: center;
+  padding: 80px 20px;
+  width: 200px;
+  height: 100px;
+  margin-bottom: 300px;
+}
+
+.cta-section h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.cta-button {
+  background-color: #131313;
+  color: #ffffff;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ff5757;
+  color: #fff;
+}
+footer {
+  background-color: #f0f0f0;
+  color: #333;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 14px;
+  margin-top: 60px;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #ff5757;
+}
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio-item {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  margin-top: auto;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 250px; /* ili 280px ako želiš višu sliku */
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.portfolio-item h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+
+.portfolio-item p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* VAŽNO: sada 2 po redu */
+  gap: 20px;
+}
+
+.portfolio-item h3,
+.portfolio-item p {
+  margin: 10px;
+}
+@media (max-width: 768px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-gallery {
+    grid-template-columns: 1fr; /* Kartice idu jedna ispod druge */
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .album {
+    position: static;
+    display: grid !important; /* uvijek prikazano */
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    box-shadow: none;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .album-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cover {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+}
+
+
+#lightbox-img {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  left: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  user-select: none;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+/* Zatvaranje (xić) */
+.close {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.close:hover {
+  color: #bbb;
+}
+
+/* Strelice */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.3s;
+  user-select: none;
+  z-index: 101;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+#lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  display: block;
+  margin: 60px auto 0 auto; /* ovo spusti sliku dole */
+}
+/* Efekat prelaska slike */
+.fade-out {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.lightbox-img {
+  margin-top: 60px;
+  max-width: 80%;
+  max-height: 80%;
+  transition: transform 0.3s ease;
+}
+
+.lightbox .caption {
+  color: #fff;
+  padding: 10px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-size: 40px;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+.prev:hover, .next:hover, .close:hover {
+  color: #bbb;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  font-size: 48px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(-50%);
+  padding: 10px;
+  z-index: 1001;
+  margin-right: 30px;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+/* Lightbox pozadina - tamna, poluprozirna, preko cijelog ekrana */
+.portfolio-lightbox {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  color: white;
+  text-align: center;
+}
+.lightbox-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  user-select: none;
+  z-index: 1100;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.25);
+  transition: color 0.3s ease, background-color 0.3s ease;
+  user-select: none;
+}
+.right-arrow {
+  position: fixed;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.25);
+  transition: color 0.3s ease, background-color 0.3s ease;
+  z-index: 1100;
+}
+
+.right-arrow:hover {
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.lightbox-arrow:hover {
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.left-arrow {
+  left: 15px;
+}
+
+.right-arrow {
+  right: 15px;
+}
+
+/* Kad je aktivan, pokazuje se sa fade-in efektom */
+.portfolio-lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Slika zauzima maksimalno oko 80% širine i visine ekrana, ne pomjera stranicu */
+.portfolio-lightbox img {
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  user-select: none;
+  pointer-events: none; /* klik na sliku NE zatvara lightbox */
+}
+
+/* Naslov i opis ispod slike */
+.portfolio-lightbox h3 {
+  margin: 15px 0 5px;
+  font-size: 1.8rem;
+}
+
+.portfolio-lightbox p {
+  max-width: 700px;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* Dugme za zatvaranje u gornjem desnom uglu */
+.close-portfolio {
+  position: fixed;
+  top: 15px;
+  left: 25px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+  z-index: 1100;
+}
+
+.close-portfolio:hover {
+  color: #ff5050;
+}
+html {
+  scroll-behavior: smooth;
+}

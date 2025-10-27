@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Majda Design Studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">IrisDesign</a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#expertise">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Creative Graphic Designer</h1>
+      <p>Branding • Visual Identity • Print Design</p>
+      <a href="#contact" class="btn">Let's Work Together</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+<p>Hi, I'm Iris — a passionate graphic designer with over 4 years of experience in creating bold, meaningful visual identities. I specialize in branding, digital illustrations, and social media design.<p>My approach blends creativity with clarity, helping brands tell their stories in a unique and impactful way.</p> </section>
+<div class="wrapper">
+  <div class="album-container">
+    <img src="6.jpg" alt="Naslovna slika" class="cover">
+    <div class="album">
+      <img src="1.jpg" alt="Slika 1" class="thumb">
+      <img src="2.jpg" alt="Slika 2" class="thumb">
+      <img src="3.jpg" alt="Slika 3" class="thumb">
+       <img src="4.jpg" alt="Slika 1" class="thumb">
+      <img src="5.jpg" alt="Slika 2" class="thumb">
+      <img src="7.jpg" alt="Slika 3" class="thumb">
+    </div>
+  </div>
+</div>
+
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img id="lightbox-img" src="" alt="">
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+</div>
+
+<script src="script.js"></script>
+<section id="expertise" class="expertise-section" >
+  <h2>My Design Expertise</h2>
+  <div class="expertise-wrapper">
+<div class="expertise-item" data-tooltip="We help build unique and timeless brand identities.">
+    <div class="icon-circle">🎨</div>
+    <div>
+        <h3>Brand Identity</h3>
+        <p>Developing complete and consistent visual branding systems.</p>
+    </div>
+</div>
+
+<div class="expertise-item" data-tooltip="We design printed materials that people actually keep.">
+    <div class="icon-circle">🖨</div>
+    <div>
+        <h3>Print Design</h3>
+        <p>Creating business cards, flyers, posters, and brochures with impact.</p>
+    </div>
+</div>
+
+<div class="expertise-item" data-tooltip="We create scroll-stopping content for your audience.">
+    <div class="icon-circle">📱</div>
+    <div>
+        <h3>Social Media</h3>
+        <p>Designing engaging content tailored to your digital platforms.</p>
+ </div>
+</div>
+  </div>
+</section>
+<section id="portfolio">
+  <h2>Portfolio</h2>
+
+  <div class="portfolio-gallery">
+
+    <div class="portfolio-item">
+      <img src="8.jpg" alt="Visual Identity for NOVA" class="portfolio-thumb">
+      <h3>Visual Identity for NOVA</h3>
+      <p>Complete branding for an inclusive digital platform, combining bold typography, a vibrant color palette, and modern minimalism to communicate clarity and accessibility.</p>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="9.jpg" alt="Yoga Studio Print Campaign" class="portfolio-thumb">
+      <h3>Yoga Studio Print Campaign</h3>
+      <p>A serene flyer and business card design that blend tranquility with professionalism through soft colors and clean typography.</p>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="10.jpg" alt="Vegan Café Instagram Visual Pack" class="portfolio-thumb">
+      <h3>Vegan Café Instagram Visual Pack</h3>
+      <p>Social media visuals for a plant-based café – designed to highlight freshness, simplicity, and an organic feel on digital platforms.</p>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="11.jpg" alt="Social Media Campaign" class="portfolio-thumb">
+      <h3>Social Media Campaign</h3>
+      <p>Vibrant Instagram visuals designed to boost brand awareness and engage audiences through playful typography and color.</p>
+    </div>
+<div id="portfolio-lightbox" class="portfolio-lightbox">
+  <span class="close-portfolio">&times;</span>
+
+  <span class="lightbox-arrow left-arrow">&#10094;</span> <!-- Lijeva strelica -->
+
+  <img id="portfolio-lightbox-img" src="" alt="">
+
+  <span class="lightbox-arrow right-arrow">&#10095;</span> <!-- Desna strelica -->
+
+  <h3 id="portfolio-lightbox-title"></h3>
+  <p id="portfolio-lightbox-description"></p>
+</div>
+  </div>
+</section>
+  </div>
+</section>
+<section class="testimonials">
+  <h2><i>What Clients Say</i></h2>
+  <div class="testimonial">
+    <p>“Iris delivered exactly what we needed — a beautiful, cohesive brand identity. Would recommend her in a heartbeat.”</p>
+    <span>— Lara, Founder at BoldCo</span>
+  </div>
+  <div class="testimonial">
+    <p>“Professional, fast, and truly creative. Our social media visuals finally match our brand.”</p>
+    <span>— Kenan, Marketing Lead at NovaMarket</span>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Ready to bring your brand to life?</h2>
+  <a href="#contact" class="cta-button">Let’s Talk</a>
+</section>
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email me at <a href="mailto:iris@example.com">iris@example.com</a> or use the form below.</p>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  <footer>
+  <p>&copy; 2025 Iris. All rights reserved.</p>
+  <p><a href="mailto:iris@example.com">iris@example.com</a></p>
+</footer>
+<div id="portfolio-lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="portfolio-lightbox-img" src="" alt="">
+  <h3 id="portfolio-lightbox-title"></h3>
+  <p id="portfolio-lightbox-caption"></p>
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const images = document.querySelectorAll('.portfolio-item img');
+  const lightbox = document.getElementById('portfolio-lightbox');
+  const lightboxImg = document.getElementById('portfolio-lightbox-img');
+  const lightboxTitle = document.getElementById('portfolio-lightbox-title');
+  const lightboxDescription = document.getElementById('portfolio-lightbox-description');
+  const closeBtn = document.querySelector('.close-portfolio');
+  const nextBtn = document.querySelector('.right-arrow');
+  const prevBtn = document.querySelector('.left-arrow');
+
+  let currentIndex = 0;
+
+  // Otvori lightbox klikom na sliku
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      currentIndex = index;
+      showImage(currentIndex);
+      lightbox.classList.add('active');
+    });
+  });
+
+  // Funkcija za prikaz slike
+  function showImage(index) {
+    const img = images[index];
+    lightboxImg.src = img.src;
+    lightboxTitle.textContent = img.getAttribute('data-title') || '';
+    lightboxDescription.textContent = img.getAttribute('data-description') || '';
+  }
+
+  // Strelica desno (sljedeća)
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  });
+
+  // Strelica lijevo (prethodna)
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  });
+
+  // Zatvori klikom na X
+  closeBtn.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+
+  // Tastatura
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+
+    if (e.key === 'ArrowRight') {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    } else if (e.key === 'ArrowLeft') {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    } else if (e.key === 'Escape') {
+      lightbox.classList.remove('active');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
