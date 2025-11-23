@@ -885,4 +885,53 @@ footer a:hover {
 }
 html {
   scroll-behavior: smooth;
+
+}
+/* ============= BASIC RESPONSIVE FIX ============= */
+
+/* slike i videa da ne iskaču van ekrana */
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* tijelo malo uvući na malim ekranima */
+@media (max-width: 768px) {
+
+    body {
+        margin: 0;
+        padding: 0 16px; /* mali prostor sa strane da ne lijepi uz ivicu */
+    }
+
+    /* sve glavne sekcije neka se šire 100% */
+    section,
+    .container,
+    .wrapper,
+    .content {
+        max-width: 100%;
+    }
+
+    /* ako imaš blokove koji su u dva stupca – stavi ih jedan ispod drugog */
+    .row,
+    .columns,
+    .flex-row {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    /* heading malo smanji da ne bude ogromno na mobu */
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
 }
