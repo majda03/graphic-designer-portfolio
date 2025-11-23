@@ -935,3 +935,136 @@ img, video {
         line-height: 1.6;
     }
 }
+
+/* ============================================
+   UNIVERSAL RESPONSIVE FIX for entire website
+   ============================================ */
+@media (max-width: 768px) {
+
+    /* GLOBAL — nema horizontalnog skrola */
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* SVE KONTEJNER SEKCIJE – PORAVNANE */
+    section,
+    main,
+    .wrapper,
+    .container,
+    .content,
+    .page {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    /* SVE ROW / FLEX STRUKTURE — PRELAZE U KOLONU */
+    .row,
+    .columns,
+    .flex-row,
+    .two-col,
+    .three-col,
+    .split,
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* NASLOVI MANJI I CENTRIRANI */
+    h1 {
+        font-size: 28px !important;
+        text-align: center !important;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 22px !important;
+        text-align: center !important;
+        line-height: 1.3;
+    }
+
+    h3 {
+        text-align: center !important;
+    }
+
+    /* PARAGRAFI */
+    p {
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+        text-align: center !important;
+    }
+
+    /* SLIKE — DA NE BJEŽE U DESNO */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+
+    /* GRAFIČKI PROJEKTI – GRID PORAVNAN */
+    .gallery-grid,
+    .projects-grid,
+    .work-showcase,
+    .images-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        justify-items: center !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+
+    /* KARTICE (PROJECT CARDS) */
+    .card,
+    .project-card,
+    .work-card,
+    .item {
+        width: 100% !important;
+        max-width: 340px !important;
+        margin: 0 auto !important;
+    }
+
+    /* ABOUT SEKCIJA – PORAVNAVANJE FOTKE I TEKSTA */
+    .about-section,
+    .about-flex,
+    .about-wrapper {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        padding: 0 16px !important;
+    }
+
+    .about img {
+        margin: 0 auto !important;
+        width: 180px !important;
+        height: 180px !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+    }
+
+    .about-text {
+        margin: 0 !important;
+        max-width: 100% !important;
+        text-align: center !important;
+    }
+
+    /* FOOTER PORAVNAN */
+    footer p {
+        text-align: center !important;
+        font-size: 14px !important;
+    }
+}
